@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>documents</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/iview/dist/iview.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/iview/dist/styles/iview.css">
+  <script src="tree.js"></script>
+  <script src="documents.js"></script>
+</head>
+<body>
+  <div id="app" style="height: 100vh; padding: 16px; background: #eee">
+    <row style="height: 100%;width: 100%">
+      <i-col span="6" style="height: 100%;overflow: auto">
+        <card shadow>
+          <tree :data="tree" @on-select-change="selectTreeNode"></tree>
+        </card>
+      </i-col>
+      <i-col span="18" style="height: 100%;overflow: auto;padding: 0 0 0 16px">
+        <card v-for="(document, index) in documents" :key="index" shadow style="margin-bottom: 16px">
+          <p slot="title">
+            <a :href="'https://github.com/lost-manul/documents/blob/master/' + document.path" target="_blank">
+              {{document.title}}
+            </a>
+          </p>
+          <tag v-for="(tag, tagIndex) in document.tags" :key="tagIndex" type="dot"
+               :color="tagColors[tagIndex % tagColors.length]" style="cursor: default">
+            {{tag}}
+          </tag>
+        </card>
+      </i-col>
+    </row>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        tree: [],
+        documents: [],
+        tagMap: {},
+        tagColors: ['#2db7f5', '#19be6b', '#ff9900', '#ed4014']
+      },
+      methods: {
+        selectTreeNode(nodes) {
+          if (nodes && nodes.length > 0) {
+            let documentIndexSet = new Set()
+            let childrenTitles = this.listChildrenTitles(nodes)
+            for (let i = 0; i < childrenTitles.length; i++) {
+              let tagIndices = this.tagMap[childrenTitles[i]]
+              if (tagIndices && tagIndices.length > 0) {
+                for (let j = 0; j < tagIndices.length; j++) {
+                  documentIndexSet.add(tagIndices[j])
+                }
+              }
+            }
+            let documentIndices = Array.from(documentIndexSet).sort()
+            let tempDocuments = []
+            for (let i = 0; i < documentIndices.length; i++) {
+              tempDocuments.push(documents[documentIndices[i]])
+            }
+            this.documents = tempDocuments
+          } else {
+            this.documents = documents
+          }
+        },
+        listChildrenTitles(nodes) {
+          let titles = []
+          for (let i = 0; i < nodes.length; i++) {
+            let children = nodes[i].children
+            if (children && children.length > 0) {
+              let childrenTitles = this.listChildrenTitles(children)
+              for (let j = 0; j < childrenTitles.length; j++) {
+                titles.push(childrenTitles[j])
+              }
+            } else {
+              titles.push(nodes[i].title)
+            }
+          }
+          return titles
+        }
+      },
+      created() {
+        this.tree = tree
+        this.documents = documents
+        let tagMap = {}
+        for (let i = 0; i < documents.length; i++) {
+          let tags = documents[i].tags
+          if (tags && tags.length > 0) {
+            for (let j = 0; j < tags.length; j++) {
+              let indices = tagMap[tags[j]]
+              if (indices == null) {
+                indices = []
+                tagMap[tags[j]] = indices
+              }
+              indices.push(i)
+            }
+          }
+        }
+        this.tagMap = tagMap
+      }
+    })
+  </script>
+</body>
+</html>
