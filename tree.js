@@ -8,6 +8,17 @@ let tree = [
     ]
   },
   {
+    title: '数据库',
+    children: [
+      {
+        title: 'mysql'
+      },
+      {
+        title: 'oracle'
+      }
+    ]
+  },
+  {
     title: '开发工具',
     children: [
       {

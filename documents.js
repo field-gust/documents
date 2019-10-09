@@ -27,5 +27,13 @@ let documents = [
       'vue'
     ],
     path: '1910/03.md'
+  },
+  {
+    title: '将原来支持mysql的sql修改为支持oracle的改动整理',
+    tags: [
+      'mysql',
+      'oracle'
+    ],
+    path: '1910/04.md'
   }
 ]
