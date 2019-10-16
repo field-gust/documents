@@ -3,7 +3,18 @@ let tree = [
     title: '前端',
     children: [
       {
+        title: 'javascript'
+      },
+      {
         title: 'vue'
+      }
+    ]
+  },
+  {
+    title: '后端',
+    children: [
+      {
+        title: 'mybatis'
       }
     ]
   },
@@ -34,6 +45,9 @@ let tree = [
       },
       {
         title: 'tomcat'
+      },
+      {
+        title: 'websphere'
       }
     ]
   },

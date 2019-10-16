@@ -29,11 +29,26 @@ let documents = [
     path: '1910/03.md'
   },
   {
-    title: '将原来支持mysql的sql修改为支持oracle的改动整理',
+    title: 'mybatis中将原来支持mysql的sql修改为支持oracle的改动整理',
     tags: [
+      'mybatis',
       'mysql',
       'oracle'
     ],
     path: '1910/04.md'
+  },
+  {
+    title: 'input事件当有输入法时会多次触发',
+    tags: [
+      'javascript'
+    ],
+    path: '1910/05.md'
+  },
+  {
+    title: 'websphere使用总结',
+    tags: [
+      'websphere'
+    ],
+    path: '1910/06.md'
   }
 ]
