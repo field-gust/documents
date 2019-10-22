@@ -3,10 +3,10 @@ let tree = [
     title: '前端',
     children: [
       {
-        title: 'javascript'
+        title: 'Javascript'
       },
       {
-        title: 'vue'
+        title: 'Vue'
       }
     ]
   },
@@ -14,7 +14,7 @@ let tree = [
     title: '后端',
     children: [
       {
-        title: 'mybatis'
+        title: 'Mybatis'
       }
     ]
   },
@@ -22,10 +22,10 @@ let tree = [
     title: '数据库',
     children: [
       {
-        title: 'mysql'
+        title: 'Mysql'
       },
       {
-        title: 'oracle'
+        title: 'Oracle'
       }
     ]
   },
@@ -41,13 +41,16 @@ let tree = [
     title: '部署工具',
     children: [
       {
-        title: 'nginx'
+        title: 'Nginx'
       },
       {
-        title: 'tomcat'
+        title: 'Tomcat'
       },
       {
-        title: 'websphere'
+        title: 'Websphere'
+      },
+      {
+        title: 'Weblogic'
       }
     ]
   },
@@ -55,7 +58,7 @@ let tree = [
     title: '其他',
     children: [
       {
-        title: 'https'
+        title: 'HTTPS'
       }
     ]
   }
