@@ -1,6 +1,6 @@
 let documents = [
   {
-    title: 'CentOS系统tomcat启动太慢',
+    title: 'CentOS系统Tomcat启动太慢',
     tags: [
       'Tomcat'
     ],
@@ -14,7 +14,7 @@ let documents = [
     path: '1910/01.md'
   },
   {
-    title: 'nginx通过申请Let\'s Encrypt免费SSL证书来使用https',
+    title: 'Nginx通过申请Let\'s Encrypt免费SSL证书来使用HTTPS',
     tags: [
       'Nginx',
       'HTTPS'
@@ -22,14 +22,14 @@ let documents = [
     path: '1910/02.md'
   },
   {
-    title: 'vue-cli配置文件详解',
+    title: 'Vue-cli配置文件详解',
     tags: [
       'Vue'
     ],
     path: '1910/03.md'
   },
   {
-    title: 'mybatis中将原来支持mysql的sql修改为支持oracle的改动整理',
+    title: 'Mybatis中将原来支持Mysql的sql修改为支持Oracle的改动整理',
     tags: [
       'Mybatis',
       'Mysql',
@@ -45,16 +45,16 @@ let documents = [
     path: '1910/05.md'
   },
   {
-    title: 'websphere使用总结',
+    title: 'Websphere使用总结',
     tags: [
       'Websphere'
     ],
     path: '1910/06.md'
   },
   {
-    title: 'weblogic使用总结',
+    title: 'Weblogic使用总结',
     tags: [
-      'Websphere'
+      'Weblogic'
     ],
     path: '1910/07.md'
   }
