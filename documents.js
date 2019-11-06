@@ -5,14 +5,14 @@ let documents = [
       'Tomcat',
       'Weblogic'
     ],
-    path: '1910/00.md'
+    path: '000.md'
   },
   {
     title: 'IDEA使用Lombok插件后编译报错',
     tags: [
       'IDEA'
     ],
-    path: '1910/01.md'
+    path: '001.md'
   },
   {
     title: 'Nginx通过申请Let\'s Encrypt免费SSL证书来使用HTTPS',
@@ -20,14 +20,14 @@ let documents = [
       'Nginx',
       'HTTPS'
     ],
-    path: '1910/02.md'
+    path: '002.md'
   },
   {
     title: 'Vue-cli配置文件详解',
     tags: [
       'Vue'
     ],
-    path: '1910/03.md'
+    path: '003.md'
   },
   {
     title: 'Mybatis中将原来支持Mysql的sql修改为支持Oracle的改动整理',
@@ -36,27 +36,27 @@ let documents = [
       'Mysql',
       'Oracle'
     ],
-    path: '1910/04.md'
+    path: '004.md'
   },
   {
     title: 'input事件当有输入法时会多次触发',
     tags: [
       'Javascript'
     ],
-    path: '1910/05.md'
+    path: '005.md'
   },
   {
     title: 'Websphere使用总结',
     tags: [
       'Websphere'
     ],
-    path: '1910/06.md'
+    path: '006.md'
   },
   {
     title: 'Weblogic使用总结',
     tags: [
       'Weblogic'
     ],
-    path: '1910/07.md'
+    path: '007.md'
   }
 ]
