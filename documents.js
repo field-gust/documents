@@ -1,8 +1,9 @@
 let documents = [
   {
-    title: 'CentOS系统Tomcat启动太慢',
+    title: 'CentOS系统Tomcat和Weblogic启动太慢',
     tags: [
-      'Tomcat'
+      'Tomcat',
+      'Weblogic'
     ],
     path: '1910/00.md'
   },
