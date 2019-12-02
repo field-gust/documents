@@ -58,5 +58,12 @@ let documents = [
       'Weblogic'
     ],
     path: '007.md'
+  },
+  {
+    title: 'IDEA使用中文输入法不显示候选框',
+    tags: [
+      'IDEA'
+    ],
+    path: '008.md'
   }
 ]
