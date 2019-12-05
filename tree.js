@@ -15,6 +15,9 @@ let tree = [
     children: [
       {
         title: 'Mybatis'
+      },
+      {
+        title: 'Spring'
       }
     ]
   },

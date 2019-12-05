@@ -65,5 +65,13 @@ let documents = [
       'IDEA'
     ],
     path: '008.md'
+  },
+  {
+    title: 'IDEA中springboot的yml配置对自定义属性的提示',
+    tags: [
+      'IDEA',
+      'Spring'
+    ],
+    path: '009.md'
   }
 ]
