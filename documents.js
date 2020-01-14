@@ -5,6 +5,7 @@ let documents = [
       'Tomcat',
       'Weblogic'
     ],
+    inRepository: true,
     path: '000.md'
   },
   {
@@ -12,6 +13,7 @@ let documents = [
     tags: [
       'IDEA'
     ],
+    inRepository: true,
     path: '001.md'
   },
   {
@@ -20,6 +22,7 @@ let documents = [
       'Nginx',
       'HTTPS'
     ],
+    inRepository: true,
     path: '002.md'
   },
   {
@@ -27,6 +30,7 @@ let documents = [
     tags: [
       'Vue'
     ],
+    inRepository: true,
     path: '003.md'
   },
   {
@@ -36,6 +40,7 @@ let documents = [
       'Mysql',
       'Oracle'
     ],
+    inRepository: true,
     path: '004.md'
   },
   {
@@ -43,6 +48,7 @@ let documents = [
     tags: [
       'Javascript'
     ],
+    inRepository: true,
     path: '005.md'
   },
   {
@@ -50,6 +56,7 @@ let documents = [
     tags: [
       'Websphere'
     ],
+    inRepository: true,
     path: '006.md'
   },
   {
@@ -57,6 +64,7 @@ let documents = [
     tags: [
       'Weblogic'
     ],
+    inRepository: true,
     path: '007.md'
   },
   {
@@ -64,6 +72,7 @@ let documents = [
     tags: [
       'IDEA'
     ],
+    inRepository: true,
     path: '008.md'
   },
   {
@@ -72,6 +81,15 @@ let documents = [
       'IDEA',
       'Spring'
     ],
+    inRepository: true,
     path: '009.md'
+  },
+  {
+    title: 'Vue实现拖拽功能',
+    tags: [
+      'Vue'
+    ],
+    inRepository: false,
+    path: 'https://segmentfault.com/a/1190000013606983'
   }
 ]

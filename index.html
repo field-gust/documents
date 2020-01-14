@@ -20,7 +20,10 @@
       <i-col span="18" style="height: 100%;overflow: auto;padding: 0 0 0 16px">
         <card v-for="(document, index) in documents" :key="index" shadow style="margin-bottom: 16px">
           <p slot="title">
-            <a :href="'https://github.com/lost-manul/documents/blob/master/documents/' + document.path" target="_blank">
+            <a v-if="document.inRepository" :href="'https://github.com/lost-manul/documents/blob/master/documents/' + document.path" target="_blank">
+              {{document.title}}
+            </a>
+            <a v-else :href="document.path" target="_blank">
               {{document.title}}
             </a>
           </p>
