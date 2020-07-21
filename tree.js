@@ -58,6 +58,14 @@ let tree = [
     ]
   },
   {
+    title: '监控工具',
+    children: [
+      {
+        title: 'Zipkin'
+      }
+    ]
+  },
+  {
     title: '其他',
     children: [
       {

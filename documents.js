@@ -91,5 +91,14 @@ let documents = [
     ],
     inRepository: false,
     path: 'https://segmentfault.com/a/1190000013606983'
+  },
+  {
+    title: 'SpringCloud项目使用Zipkin',
+    tags: [
+      'Zipkin',
+      'Spring'
+    ],
+    inRepository: true,
+    path: '010.md'
   }
 ]
