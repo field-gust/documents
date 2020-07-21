@@ -22,13 +22,26 @@ let tree = [
     ]
   },
   {
-    title: '数据库',
+    title: '中间件',
     children: [
       {
-        title: 'Mysql'
+        title: '数据库',
+        children: [
+          {
+            title: 'Mysql'
+          },
+          {
+            title: 'Oracle'
+          }
+        ]
       },
       {
-        title: 'Oracle'
+        title: '监控',
+        children: [
+          {
+            title: 'Zipkin'
+          }
+        ]
       }
     ]
   },
@@ -37,6 +50,9 @@ let tree = [
     children: [
       {
         title: 'IDEA'
+      },
+      {
+        title: 'Postman'
       }
     ]
   },
@@ -54,14 +70,6 @@ let tree = [
       },
       {
         title: 'Weblogic'
-      }
-    ]
-  },
-  {
-    title: '监控工具',
-    children: [
-      {
-        title: 'Zipkin'
       }
     ]
   },

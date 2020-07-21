@@ -100,5 +100,13 @@ let documents = [
     ],
     inRepository: true,
     path: '010.md'
+  },
+  {
+    title: 'Windows7系统Postman从7.26开始打开白屏',
+    tags: [
+      'Postman'
+    ],
+    inRepository: false,
+    path: 'https://blog.csdn.net/VANS_01/article/details/106673365'
   }
 ]
