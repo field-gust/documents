@@ -108,5 +108,13 @@ let documents = [
     ],
     inRepository: false,
     path: 'https://blog.csdn.net/VANS_01/article/details/106673365'
+  },
+  {
+    title: 'axios设置responseType失效',
+    tags: [
+      'axios'
+    ],
+    inRepository: false,
+    path: 'https://blog.csdn.net/weixin_42142057/article/details/97655591'
   }
 ]
