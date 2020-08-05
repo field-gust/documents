@@ -9,7 +9,7 @@ let tree = [
         title: 'Vue'
       },
       {
-        title: 'axios'
+        title: 'Axios'
       }
     ]
   },
@@ -21,6 +21,9 @@ let tree = [
       },
       {
         title: 'Spring'
+      },
+      {
+        title: 'Log4j2'
       }
     ]
   },
@@ -35,6 +38,9 @@ let tree = [
           },
           {
             title: 'Oracle'
+          },
+          {
+            title: 'MongoDB'
           }
         ]
       },
