@@ -126,5 +126,13 @@ let documents = [
     ],
     inRepository: true,
     path: '011.md'
+  },
+  {
+    title: 'spring cloud config使用与原理分析',
+    tags: [
+      'Spring'
+    ],
+    inRepository: false,
+    path: 'https://blog.csdn.net/qq_20597727/article/details/82465069'
   }
 ]
