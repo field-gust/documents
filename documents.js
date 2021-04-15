@@ -134,5 +134,13 @@ let documents = [
     ],
     inRepository: false,
     path: 'https://blog.csdn.net/qq_20597727/article/details/82465069'
+  },
+  {
+    title: 'spring cloud eureka升级到2后只能获取到启动时的实例信息',
+    tags: [
+      'Spring'
+    ],
+    inRepository: true,
+    path: '012.md'
   }
 ]
