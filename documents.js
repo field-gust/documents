@@ -142,5 +142,13 @@ let documents = [
     ],
     inRepository: true,
     path: '012.md'
+  },
+  {
+    title: 'electron-vue使用vue-design出现警告的解决方法',
+    tags: [
+      'Vue'
+    ],
+    inRepository: true,
+    path: '013.md'
   }
 ]
