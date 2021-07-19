@@ -17,6 +17,9 @@ let tree = [
     title: '后端',
     children: [
       {
+        title: 'Java'
+      },
+      {
         title: 'Mybatis'
       },
       {
@@ -45,6 +48,14 @@ let tree = [
         ]
       },
       {
+        title: '注册中心',
+        children: [
+          {
+            title: 'Consul'
+          }
+        ]
+      },
+      {
         title: '监控',
         children: [
           {
@@ -61,7 +72,15 @@ let tree = [
         title: 'IDEA'
       },
       {
-        title: 'Postman'
+        title: 'Eclipse'
+      }
+    ]
+  },
+  {
+    title: '调试工具',
+    children: [
+      {
+        title: 'Eclipse'
       }
     ]
   },

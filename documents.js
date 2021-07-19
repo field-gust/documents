@@ -150,5 +150,38 @@ let documents = [
     ],
     inRepository: true,
     path: '013.md'
+  },
+  {
+    title: 'Eclipse报错“Build path contains duplicate entry“的解决方法',
+    tags: [
+      'Eclipse'
+    ],
+    inRepository: false,
+    path: 'https://blog.csdn.net/anniewhite/article/details/108331273'
+  },
+  {
+    title: 'jar常用操作',
+    tags: [
+      'Java'
+    ],
+    inRepository: false,
+    path: 'https://www.cnblogs.com/hugb/p/10770408.html'
+  },
+  {
+    title: 'Tomcat日志分割',
+    tags: [
+      'Tomcat'
+    ],
+    inRepository: false,
+    path: 'https://www.jianshu.com/p/43f2849e16fb'
+  },
+  {
+    title: 'Spring项目使用ConsulConfig的配置',
+    tags: [
+      'Consul',
+      'Spring'
+    ],
+    inRepository: true,
+    path: '014.md'
   }
 ]
