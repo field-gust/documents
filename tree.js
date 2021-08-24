@@ -77,6 +77,14 @@ let tree = [
     ]
   },
   {
+    title: '构建工具',
+    children: [
+      {
+        title: 'Gradle'
+      }
+    ]
+  },
+  {
     title: '调试工具',
     children: [
       {
