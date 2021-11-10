@@ -56,6 +56,14 @@ let tree = [
         ]
       },
       {
+        title: '消息',
+        children: [
+          {
+            title: 'RocketMQ'
+          }
+        ]
+      },
+      {
         title: '监控',
         children: [
           {

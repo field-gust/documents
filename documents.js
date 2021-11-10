@@ -201,5 +201,13 @@ let documents = [
     ],
     inRepository: true,
     path: '016.md'
+  },
+  {
+    title: 'RocketMQ学习文档',
+    tags: [
+      'RocketMQ'
+    ],
+    inRepository: true,
+    path: '017.md'
   }
 ]
