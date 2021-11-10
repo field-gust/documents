@@ -193,7 +193,7 @@ let documents = [
     ],
     inRepository: true,
     path: '015.md'
-  ,
+  },
   {
     title: 'SpringBootAdmin学习文档',
     tags: [
@@ -201,4 +201,5 @@ let documents = [
     ],
     inRepository: true,
     path: '016.md'
-  }]
+  }
+]
