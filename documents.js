@@ -209,5 +209,14 @@ let documents = [
     ],
     inRepository: true,
     path: '017.md'
+  },
+  {
+    title: 'Kubernetes集群部署Redis集群(Cluster)',
+    tags: [
+      'Kubernetes',
+      'Redis'
+    ],
+    inRepository: true,
+    path: '018.md'
   }
 ]

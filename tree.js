@@ -48,6 +48,14 @@ let tree = [
         ]
       },
       {
+        title: '缓存',
+        children: [
+          {
+            title: 'Redis'
+          }
+        ]
+      },
+      {
         title: '注册中心',
         children: [
           {
@@ -93,14 +101,6 @@ let tree = [
     ]
   },
   {
-    title: '调试工具',
-    children: [
-      {
-        title: 'Eclipse'
-      }
-    ]
-  },
-  {
     title: '部署工具',
     children: [
       {
@@ -114,6 +114,14 @@ let tree = [
       },
       {
         title: 'Weblogic'
+      },
+      {
+        title: 'Docker',
+        children: [
+          {
+            title: 'Kubernetes'
+          }
+        ]
       }
     ]
   },
