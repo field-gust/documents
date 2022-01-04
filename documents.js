@@ -218,5 +218,14 @@ let documents = [
     ],
     inRepository: true,
     path: '018.md'
+  },
+  {
+    title: 'Kubernetes集群部署ElasticSearch集群',
+    tags: [
+      'Kubernetes',
+      'ElasticSearch'
+    ],
+    inRepository: true,
+    path: '019.md'
   }
 ]

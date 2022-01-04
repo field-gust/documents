@@ -48,6 +48,9 @@ let tree = [
         ]
       },
       {
+        title: 'ElasticSearch'
+      },
+      {
         title: '缓存',
         children: [
           {
