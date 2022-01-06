@@ -227,5 +227,14 @@ let documents = [
     ],
     inRepository: true,
     path: '019.md'
+  },
+  {
+    title: 'Kubernetes集群部署RocketMQ集群',
+    tags: [
+      'Kubernetes',
+      'RocketMQ'
+    ],
+    inRepository: true,
+    path: '020.md'
   }
 ]
