@@ -236,5 +236,13 @@ let documents = [
     ],
     inRepository: true,
     path: '020.md'
+  },
+  {
+    title: 'elasticsearch-analysis-ansj连接数据库',
+    tags: [
+      'ElasticSearch'
+    ],
+    inRepository: true,
+    path: '021.md'
   }
 ]
