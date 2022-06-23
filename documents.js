@@ -244,5 +244,13 @@ let documents = [
     ],
     inRepository: true,
     path: '021.md'
+  },
+  {
+    title: 'elasticsearch-analysis-ansj自定义分词器',
+    tags: [
+      'ElasticSearch'
+    ],
+    inRepository: true,
+    path: '022.md'
   }
 ]
