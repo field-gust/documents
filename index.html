@@ -6,25 +6,32 @@
   <script src="https://unpkg.com/vue@2.5.22"></script>
   <script src="https://unpkg.com/iview@3.5.4/dist/iview.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/iview@3.5.4/dist/styles/iview.css">
-  <script src="tree.js"></script>
   <script src="documents.js"></script>
+  <style type="text/css">
+    .all-tag {
+      margin: 2px;
+    }
+  </style>
 </head>
 <body>
   <div id="app" style="height: 100vh; padding: 16px; background: #eee">
     <row style="height: 100%;width: 100%">
       <i-col span="6" style="height: 100%;overflow: auto">
         <card shadow>
-          <tree :data="tree" @on-select-change="selectTreeNode"></tree>
+          <i-button v-for="(tag, tagIndex) in allTags" :key="tagIndex" @click="selectTag(tagIndex, tag.name)"
+               :type="tagColors[tag.color]" :ghost="tagIndex !== selectedTagIndex" class="all-tag">
+            {{ `${tag.name} (${tag.count})` }}
+          </i-button>
         </card>
       </i-col>
       <i-col span="18" style="height: 100%;overflow: auto;padding: 0 0 0 16px">
         <card v-for="(document, index) in documents" :key="index" shadow style="margin-bottom: 16px">
           <p slot="title">
-            <a v-if="document.inRepository" :href="'https://github.com/lost-manul/documents/blob/master/documents/' + document.path" target="_blank">
-              {{document.title}}
+            <a v-if="document.isExternalLink" :href="document.path" target="_blank">
+              {{ document.title }}
             </a>
-            <a v-else :href="document.path" target="_blank">
-              {{document.title}}
+            <a v-else :href="'https://github.com/field-gust/documents/blob/master/documents/' + document.path" target="_blank">
+              {{ document.title }}
             </a>
           </p>
           <tag v-for="(tag, tagIndex) in document.tags" :key="tagIndex" type="dot"
@@ -40,52 +47,32 @@
     new Vue({
       el: '#app',
       data: {
-        tree: [],
         documents: [],
         tagMap: {},
-        tagColors: ['#2db7f5', '#19be6b', '#ff9900', '#ed4014']
+        allTags: [],
+        selectedTagIndex: null,
+        tagColors: ['primary', 'success', 'warning', 'error']
       },
       methods: {
-        selectTreeNode(nodes) {
-          if (nodes && nodes.length > 0) {
-            let documentIndexSet = new Set()
-            let childrenTitles = this.listChildrenTitles(nodes)
-            for (let i = 0; i < childrenTitles.length; i++) {
-              let tagIndices = this.tagMap[childrenTitles[i]]
-              if (tagIndices && tagIndices.length > 0) {
-                for (let j = 0; j < tagIndices.length; j++) {
-                  documentIndexSet.add(tagIndices[j])
-                }
-              }
-            }
-            let documentIndices = Array.from(documentIndexSet).sort()
+        selectTag(tagIndex, tagName) {
+          if (tagIndex === this.selectedTagIndex) {
+            this.selectedTagIndex = null
+            this.documents = documents
+          } else {
+            this.selectedTagIndex = tagIndex
             let tempDocuments = []
-            for (let i = 0; i < documentIndices.length; i++) {
-              tempDocuments.push(documents[documentIndices[i]])
+            let documentIndices = this.tagMap[tagName]
+            if (documentIndices && documentIndices.length > 0) {
+              documentIndices.sort()
+              for (let i = 0; i < documentIndices.length; i++) {
+                tempDocuments.push(documents[documentIndices[i]])
+              }
             }
             this.documents = tempDocuments
-          } else {
-            this.documents = documents
           }
-        },
-        listChildrenTitles(nodes) {
-          let titles = []
-          for (let i = 0; i < nodes.length; i++) {
-            let children = nodes[i].children
-            if (children && children.length > 0) {
-              let childrenTitles = this.listChildrenTitles(children)
-              for (let j = 0; j < childrenTitles.length; j++) {
-                titles.push(childrenTitles[j])
-              }
-            } else {
-              titles.push(nodes[i].title)
-            }
-          }
-          return titles
         }
       },
       created() {
-        this.tree = tree
         this.documents = documents
         let tagMap = {}
         for (let i = 0; i < documents.length; i++) {
@@ -101,7 +88,13 @@
             }
           }
         }
+        let allTags = []
+        let colorIndex = 0
+        for (let tag in tagMap) {
+          allTags.push({ name: tag, count: tagMap[tag].length, color: (colorIndex++ % this.tagColors.length) })
+        }
         this.tagMap = tagMap
+        this.allTags = allTags
       }
     })
   </script>

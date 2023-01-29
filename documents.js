@@ -1,256 +1,228 @@
 let documents = [
   {
-    title: 'CentOS系统Tomcat和Weblogic启动太慢',
+    title: 'centos 系统 tomcat 和 weblogic 启动很慢',
     tags: [
-      'Tomcat',
-      'Weblogic'
+      'centos',
+      'tomcat',
+      'weblogic'
     ],
-    inRepository: true,
     path: '000.md'
   },
   {
-    title: 'IDEA使用Lombok插件后编译报错',
+    title: 'idea 使用 lombok 插件后编译报错',
     tags: [
-      'IDEA'
+      'idea',
+      'lombok'
     ],
-    inRepository: true,
     path: '001.md'
   },
   {
-    title: 'Nginx通过申请Let\'s Encrypt免费SSL证书来使用HTTPS',
+    title: 'nginx 通过申请 let\'s encrypt 免费 ssl 证书来使用 https',
     tags: [
-      'Nginx',
-      'HTTPS'
+      'nginx',
+      'ssl',
+      'https'
     ],
-    inRepository: true,
     path: '002.md'
   },
   {
-    title: 'Vue-cli配置文件详解',
+    title: 'vue-cli 配置文件详解',
     tags: [
-      'Vue'
+      'vue'
     ],
-    inRepository: true,
     path: '003.md'
   },
   {
-    title: 'Mybatis中将原来支持Mysql的sql修改为支持Oracle的改动整理',
+    title: 'mybatis 中将原来支持 mysql 的 sql 修改为支持 oracle 的改动整理',
     tags: [
-      'Mybatis',
-      'Mysql',
-      'Oracle'
+      'mybatis',
+      'mysql',
+      'oracle'
     ],
-    inRepository: true,
     path: '004.md'
   },
   {
-    title: 'input事件当有输入法时会多次触发',
+    title: 'javascript 的 input 事件当使用输入法时会多次触发',
     tags: [
-      'Javascript'
+      'javascript'
     ],
-    inRepository: true,
     path: '005.md'
   },
   {
-    title: 'Websphere使用总结',
+    title: 'websphere 使用总结',
     tags: [
-      'Websphere'
+      'websphere'
     ],
-    inRepository: true,
     path: '006.md'
   },
   {
-    title: 'Weblogic使用总结',
+    title: 'weblogic 使用总结',
     tags: [
-      'Weblogic'
+      'weblogic'
     ],
-    inRepository: true,
     path: '007.md'
   },
   {
-    title: 'IDEA使用中文输入法不显示候选框',
+    title: 'idea 使用中文输入法不显示候选框',
     tags: [
-      'IDEA'
+      'idea'
     ],
-    inRepository: true,
     path: '008.md'
   },
   {
-    title: 'IDEA中springboot的yml配置对自定义属性的提示',
+    title: 'idea 中 springboot 的 yml 配置文件对自定义属性的提示',
     tags: [
-      'IDEA',
-      'Spring'
+      'idea',
+      'springboot'
     ],
-    inRepository: true,
     path: '009.md'
   },
   {
-    title: 'Vue实现拖拽功能',
+    title: 'vue 实现拖拽功能',
     tags: [
-      'Vue'
+      'vue'
     ],
-    inRepository: false,
+    isExternalLink: true,
     path: 'https://segmentfault.com/a/1190000013606983'
   },
   {
-    title: 'SpringCloud项目使用Zipkin',
+    title: 'spring cloud 项目使用 zipkin',
     tags: [
-      'Zipkin',
-      'Spring'
+      'zipkin',
+      'springcloud'
     ],
-    inRepository: true,
     path: '010.md'
   },
   {
-    title: 'Windows7系统Postman从7.26开始打开白屏',
+    title: 'windows7 系统 postman 从 7.26 开始打开白屏',
     tags: [
-      'Postman'
+      'windows',
+      'postman'
     ],
-    inRepository: false,
+    isExternalLink: true,
     path: 'https://blog.csdn.net/VANS_01/article/details/106673365'
   },
   {
-    title: 'Axios设置responseType失效',
+    title: 'axios 设置 responseType 失效',
     tags: [
-      'Axios'
+      'axios'
     ],
-    inRepository: false,
+    isExternalLink: true,
     path: 'https://blog.csdn.net/weixin_42142057/article/details/97655591'
   },
   {
-    title: 'Websphere项目接口调用超时，原因是Log4j2配置了MongoDB',
+    title: 'websphere 项目接口调用超时的原因是 log4j2 配置了 mongodb',
     tags: [
-      'Websphere',
-      'Log4j2',
-      'MongoDB'
+      'websphere',
+      'log4j2',
+      'mongodb'
     ],
-    inRepository: true,
     path: '011.md'
   },
   {
-    title: 'spring cloud config使用与原理分析',
+    title: 'spring cloud config 使用与原理分析',
     tags: [
-      'Spring'
+      'springcloud'
     ],
-    inRepository: false,
+    isExternalLink: true,
     path: 'https://blog.csdn.net/qq_20597727/article/details/82465069'
   },
   {
-    title: 'spring cloud eureka升级到2后只能获取到启动时的实例信息',
+    title: 'spring cloud eureka 升级到 2.x 后只能获取到启动时已经注册的实例信息',
     tags: [
-      'Spring'
+      'springcloud'
     ],
-    inRepository: true,
     path: '012.md'
   },
   {
-    title: 'electron-vue使用vue-design出现警告的解决方法',
+    title: 'electron-vue 使用 vue-design 出现警告的解决方法',
     tags: [
-      'Vue'
+      'vue'
     ],
-    inRepository: true,
     path: '013.md'
   },
   {
-    title: 'Eclipse报错“Build path contains duplicate entry“的解决方法',
+    title: 'eclipse 报错 "Build path contains duplicate entry" 的解决方法',
     tags: [
-      'Eclipse'
+      'eclipse'
     ],
-    inRepository: false,
+    isExternalLink: true,
     path: 'https://blog.csdn.net/anniewhite/article/details/108331273'
   },
   {
-    title: 'jar常用操作',
+    title: 'tomcat 日志分割',
     tags: [
-      'Java'
+      'tomcat'
     ],
-    inRepository: false,
-    path: 'https://www.cnblogs.com/hugb/p/10770408.html'
-  },
-  {
-    title: 'Tomcat日志分割',
-    tags: [
-      'Tomcat'
-    ],
-    inRepository: false,
+    isExternalLink: true,
     path: 'https://www.jianshu.com/p/43f2849e16fb'
   },
   {
-    title: 'Spring项目使用ConsulConfig的配置',
+    title: 'spring cloud 项目使用 consul config 的配置',
     tags: [
-      'Consul',
-      'Spring'
+      'consul',
+      'springcloud'
     ],
-    inRepository: true,
     path: '014.md'
   },
   {
-    title: '一次 war 包解压失败的问题排查',
+    title: 'gradle 构建的 war 包在 tomcat 中解压失败的问题排查',
     tags: [
-      'Tomcat',
-      'Spring',
-      'Gradle'
+      'tomcat',
+      'gradle'
     ],
-    inRepository: true,
     path: '015.md'
   },
   {
-    title: 'SpringBootAdmin学习文档',
+    title: 'spring boot admin 学习文档',
     tags: [
-      'Spring'
+      'springboot'
     ],
-    inRepository: true,
     path: '016.md'
   },
   {
-    title: 'RocketMQ学习文档',
+    title: 'rocketmq 学习文档',
     tags: [
-      'RocketMQ'
+      'rocketmq'
     ],
-    inRepository: true,
     path: '017.md'
   },
   {
-    title: 'Kubernetes集群部署Redis集群(Cluster)',
+    title: 'kubernetes 部署 redis集群 (Cluster)',
     tags: [
-      'Kubernetes',
-      'Redis'
+      'kubernetes',
+      'redis'
     ],
-    inRepository: true,
     path: '018.md'
   },
   {
-    title: 'Kubernetes集群部署ElasticSearch集群',
+    title: 'kubernetes 部署 elasticsearch 集群',
     tags: [
-      'Kubernetes',
-      'ElasticSearch'
+      'kubernetes',
+      'elasticsearch'
     ],
-    inRepository: true,
     path: '019.md'
   },
   {
-    title: 'Kubernetes集群部署RocketMQ集群',
+    title: 'kubernetes 部署 rocketmq 集群',
     tags: [
-      'Kubernetes',
-      'RocketMQ'
+      'kubernetes',
+      'rocketmq'
     ],
-    inRepository: true,
     path: '020.md'
   },
   {
-    title: 'elasticsearch-analysis-ansj连接数据库',
+    title: 'elasticsearch-analysis-ansj 连接数据库',
     tags: [
-      'ElasticSearch'
+      'elasticsearch'
     ],
-    inRepository: true,
     path: '021.md'
   },
   {
-    title: 'elasticsearch-analysis-ansj自定义分词器',
+    title: 'elasticsearch-analysis-ansj 自定义分词器',
     tags: [
-      'ElasticSearch'
+      'elasticsearch'
     ],
-    inRepository: true,
     path: '022.md'
   }
 ]
