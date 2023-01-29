@@ -11,6 +11,9 @@
     .all-tag {
       margin: 2px;
     }
+    .doc-tag {
+      cursor: default;
+    }
   </style>
 </head>
 <body>
@@ -19,7 +22,7 @@
       <i-col span="6" style="height: 100%;overflow: auto">
         <card shadow>
           <i-button v-for="(tag, tagIndex) in allTags" :key="tagIndex" @click="selectTag(tagIndex, tag.name)"
-               :type="tagColors[tag.color]" :ghost="tagIndex !== selectedTagIndex" class="all-tag">
+               :type="tag.color" :ghost="tagIndex !== selectedTagIndex" class="all-tag">
             {{ `${tag.name} (${tag.count})` }}
           </i-button>
         </card>
@@ -34,8 +37,7 @@
               {{ document.title }}
             </a>
           </p>
-          <tag v-for="(tag, tagIndex) in document.tags" :key="tagIndex" type="dot"
-               :color="tagColors[tagIndex % tagColors.length]" style="cursor: default">
+          <tag v-for="(tag, tagIndex) in document.tags" :key="tagIndex" class="doc-tag">
             {{tag}}
           </tag>
         </card>
@@ -50,10 +52,54 @@
         documents: [],
         tagMap: {},
         allTags: [],
-        selectedTagIndex: null,
-        tagColors: ['primary', 'success', 'warning', 'error']
+        tagColors: ['error', 'warning', 'success', 'primary'],
+        selectedTagIndex: null
       },
       methods: {
+        init() {
+          this.documents = documents
+          let tagMap = {}
+          for (let i = 0; i < documents.length; i++) {
+            let tags = documents[i].tags
+            if (tags && tags.length > 0) {
+              for (let j = 0; j < tags.length; j++) {
+                let indices = tagMap[tags[j]]
+                if (indices == null) {
+                  indices = []
+                  tagMap[tags[j]] = indices
+                }
+                indices.push(i)
+              }
+            }
+          }
+          let allTags = []
+          let colorIndex = 0
+          for (let tag in tagMap) {
+            allTags.push({ name: tag, count: tagMap[tag].length })
+          }
+          allTags.sort((tag1, tag2) => tag2.count - tag1.count)
+          if (allTags.length > 0) {
+            let maxCount = allTags[0].count
+            let colors = this.tagColors
+            let index = 0
+            for (let i = 0; i < colors.length - 1; i++) {
+              let minCount = maxCount * (colors.length - i - 1) / colors.length
+              for (let j = index; j < allTags.length; j++) {
+                if (allTags[j].count > minCount) {
+                  allTags[j].color = colors[i]
+                } else {
+                  index = j
+                  break
+                }
+              }
+            }
+            for (let j = index; j < allTags.length; j++) {
+              allTags[j].color = colors[colors.length - 1]
+            }
+          }
+          this.tagMap = tagMap
+          this.allTags = allTags
+        },
         selectTag(tagIndex, tagName) {
           if (tagIndex === this.selectedTagIndex) {
             this.selectedTagIndex = null
@@ -63,7 +109,6 @@
             let tempDocuments = []
             let documentIndices = this.tagMap[tagName]
             if (documentIndices && documentIndices.length > 0) {
-              documentIndices.sort()
               for (let i = 0; i < documentIndices.length; i++) {
                 tempDocuments.push(documents[documentIndices[i]])
               }
@@ -73,28 +118,7 @@
         }
       },
       created() {
-        this.documents = documents
-        let tagMap = {}
-        for (let i = 0; i < documents.length; i++) {
-          let tags = documents[i].tags
-          if (tags && tags.length > 0) {
-            for (let j = 0; j < tags.length; j++) {
-              let indices = tagMap[tags[j]]
-              if (indices == null) {
-                indices = []
-                tagMap[tags[j]] = indices
-              }
-              indices.push(i)
-            }
-          }
-        }
-        let allTags = []
-        let colorIndex = 0
-        for (let tag in tagMap) {
-          allTags.push({ name: tag, count: tagMap[tag].length, color: (colorIndex++ % this.tagColors.length) })
-        }
-        this.tagMap = tagMap
-        this.allTags = allTags
+        this.init()
       }
     })
   </script>
