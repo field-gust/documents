@@ -214,15 +214,39 @@ let documents = [
   {
     title: 'elasticsearch-analysis-ansj 连接数据库',
     tags: [
-      'elasticsearch'
+      'elasticsearch',
+      'ansj'
     ],
     path: '021.md'
   },
   {
     title: 'elasticsearch-analysis-ansj 自定义分词器',
     tags: [
-      'elasticsearch'
+      'elasticsearch',
+      'ansj'
     ],
     path: '022.md'
+  },
+  {
+    title: 'redis 实现分布式锁',
+    tags: [
+      'redis'
+    ],
+    isExternalLink: true,
+    path: 'https://www.cnblogs.com/wangyingshuo/p/14510524.html'
+  },
+  {
+    title: 'elasticsearch 索引模板',
+    tags: [
+      'elasticsearch'
+    ],
+    path: '023.md'
+  },
+  {
+    title: 'javascript 实现监听 storage',
+    tags: [
+      'javascript'
+    ],
+    path: '024.md'
   }
 ]
