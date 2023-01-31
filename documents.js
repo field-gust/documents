@@ -248,5 +248,12 @@ let documents = [
       'javascript'
     ],
     path: '024.md'
+  },
+  {
+    title: '本地化 macos 系统的应用',
+    tags: [
+      'macos'
+    ],
+    path: '025.md'
   }
 ]
